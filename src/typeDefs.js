@@ -10,7 +10,11 @@ type Query {
 
 type Shop {
     id: ID!
-    name String!
+    name: String!
+}
+
+type Mutation {
+    createShop(name: String!): Shop!
 }
 
 `;
