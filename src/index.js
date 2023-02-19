@@ -23,7 +23,7 @@ const server = async () => {
     }
 
 
-    app.get('/', (req, res) => res.send('HELLO WORLD'))
+    app.get('/', (req, res) => res.set('HELLO WORLD'))
 
     app.listen({port:4001}, ()=> {
         console.log('connected')
