@@ -1,1 +1,27 @@
-GET http://localhost:3000/subscribers
+GET http://localhost:4000/subscribers
+
+###
+
+GET http://localhost:4000/subscribers/63fa60c1bd6b0cbe5449faf2
+
+###
+
+POST http://localhost:4000/subscribers
+Content-Type: application/json
+
+{
+    "name": "Joseph Smith", 
+    "subscribedToChannel": "Sean Layton BYU"
+}
+
+###
+
+DELETE http://localhost:4000/subscribers/63fa60c1bd6b0cbe5449faf2
+
+###
+
+PATCH http://localhost:4000/subscribers/63fa60c1bd6b0cbe5449faf2
+
+{
+    "name": "New Name"
+}

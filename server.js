@@ -1,28 +1,19 @@
 require('dotenv').config()
+// mongoose.set('strictQuery', true)
+
 
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 
-mongoose.connect('process.env.DATABASE_URL', { useNewUrlParser: true })
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
 db.on('error', (error) => console.error(error))
-db.once('open', () => console.log('Connected to Database'))
+db.on('open', () => console.log('Connected to Database'))
 
 app.use(express.json())
 
 const subscribersRouter = require('./routes/subscribers')
 app.use('/subscribers', subscribersRouter)
-'localhost:3000/subscribers'
 
-app.listen(3000, () => console.log('Server Started'))
-
-// const http = require('http');
-// const app = require('index');
-
-// const port = process.env.PORT || 5000;
-// const server = http.createServer(app);
-
-// Server.listen(port, hostname: => {
-//     console.log(`Started on port ${port}`)
-// });
+app.listen(4000, () => console.log('Server Started'))
