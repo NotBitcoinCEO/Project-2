@@ -1,12 +1,19 @@
 {
-  "name": "cse-341-project",
-  "version": "1.0.0",
-  "description": "��#\u0000 \u0000P\u0000r\u0000o\u0000j\u0000e\u0000c\u0000t\u0000-\u00002\u0000\r\u0000 \u0000",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node src/index.js"
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.10.0"
   },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "name": "cse-341-project",
+  "description": "��#\u0000 \u0000P\u0000r\u0000o\u0000j\u0000e\u0000c\u0000t\u0000-\u00002\u0000\r\u0000 \u0000",
+  "version": "1.0.0",
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NotBitcoinCEO/Project-2.git"
@@ -16,18 +23,5 @@
   "bugs": {
     "url": "https://github.com/NotBitcoinCEO/Project-2/issues"
   },
-  "homepage": "https://github.com/NotBitcoinCEO/Project-2#readme",
-  "devDependencies": {
-    "@babel/cli": "^7.20.7",
-    "@babel/core": "^7.20.12",
-    "@babel/node": "^7.20.7",
-    "@babel/preset-env": "^7.20.2",
-    "nodemon": "^2.0.20"
-  },
-  "dependencies": {
-    "apollo-server-express": "^3.11.1",
-    "express": "^4.18.2",
-    "graphql": "^16.6.0",
-    "mongoose": "^6.9.2"
-  }
+  "homepage": "https://github.com/NotBitcoinCEO/Project-2#readme"
 }
