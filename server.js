@@ -25,4 +25,10 @@ const subscribersRouter = require('./routes/subscribers');
 const { undefined } = require('webidl-conversions');
 app.use('/subscribers', subscribersRouter)
 
-app.listen(4040, () => console.log('Server Started'))
+// app.use(require('./'))
+
+app.use(express.urlencoded({ extended: true}))
+app.use(express.static('public'))
+app.set('view engine', 'ejs')
+
+app.listen(4040, () => console.log('Server Started Listening'))

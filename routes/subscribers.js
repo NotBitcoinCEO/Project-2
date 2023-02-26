@@ -1,8 +1,20 @@
 const express = require('express')
-// const { resolve } = require('path')
+// const { resolve } = require('subscribers')
 // const { resourceUsage } = require('process')
 const router = express.Router()
 const Subscriber = require('../models/subscriber')
+
+// put routes here
+
+router.get("/", (req, res) => {
+    res.render('subscribers')
+})
+
+//middlewares
+
+// server.use(express.urlencoded({ extended: true}))
+// server.use(express.static('public'))
+// server.set('view engine', 'ejs')
 
 // Getting all
 router.get('/', async (req, res) => {
