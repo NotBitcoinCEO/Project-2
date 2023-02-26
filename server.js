@@ -29,6 +29,8 @@ app.use('/subscribers', subscribersRouter)
 
 app.use(express.urlencoded({ extended: true}))
 app.use(express.static('public'))
+app.use(require('./routes/subscribers'))
+app.use(require('./routes/hobbit'))
 app.set('view engine', 'ejs')
 
 app.listen(4040, () => console.log('Server Started Listening'))
